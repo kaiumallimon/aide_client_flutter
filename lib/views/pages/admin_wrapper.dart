@@ -7,8 +7,8 @@ import 'package:aide_client/views/widgets/top_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class WrapperPage extends StatelessWidget {
-  const WrapperPage({super.key});
+class AdminWrapperPage extends StatelessWidget {
+  const AdminWrapperPage({super.key});
 
   @override
   Widget build(BuildContext context) {

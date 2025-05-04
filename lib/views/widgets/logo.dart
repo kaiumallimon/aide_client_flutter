@@ -11,38 +11,32 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text.rich(
+      child: Text.rich(
+        TextSpan(
+          text: 'UIU',
+          style: GoogleFonts.montserrat(
+            fontSize: 25,
+            color: Colors.deepOrange,
+            fontWeight: FontWeight.w500,
+          ),
+          children: [
             TextSpan(
-              text: 'UIU',
+              text: '-',
               style: GoogleFonts.montserrat(
                 fontSize: 25,
-                color: Colors.deepOrange,
-                fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
-              children: [
-                TextSpan(
-                  text: '-',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 25,
-                    color: Colors.white,
-                  ),
-                ),
-                TextSpan(
-                  text: 'AIDE',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: CupertinoColors.activeBlue,
-                  ),
-                ),
-              ],
             ),
-          ),
-        ],
+            TextSpan(
+              text: 'AIDE',
+              style: GoogleFonts.montserrat(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: CupertinoColors.activeBlue,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

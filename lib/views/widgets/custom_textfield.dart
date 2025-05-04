@@ -12,6 +12,7 @@ class CustomTextfield extends StatelessWidget {
     this.maxLine = 1,
     this.prefixIcon,
     this.readOnly = false,
+    this.isPassword = false,
   });
 
   final TextEditingController controller;
@@ -22,6 +23,7 @@ class CustomTextfield extends StatelessWidget {
   final int maxLine;
   final IconData? prefixIcon;
   final bool readOnly;
+  final bool isPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class CustomTextfield extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         expands: expandable,
+        obscureText: isPassword,
         textAlignVertical: TextAlignVertical.top,
         readOnly: readOnly,
         maxLines: expandable ? null : maxLine,
